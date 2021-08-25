@@ -23,3 +23,11 @@
   margin: 0 5px;
   border-radius: 5px;
 }
+
+#main , #evaluation-form {
+  display: flex;
+}
+
+#evaluation-form {
+  width: 675px;
+}
