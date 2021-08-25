@@ -41,6 +41,11 @@
   height: 500px;
 }
 
-.full-name {
+.line {
   display: flex;
+}
+
+.column {
+  display:flex;
+  flex-direction:column;
 }
