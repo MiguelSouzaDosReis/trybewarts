@@ -1,4 +1,5 @@
 const loginButton = document.getElementById('login-button');
+const check = document.getElementById('agreement')
 
 loginButton.addEventListener('click', () => {
   const emailInput = document.getElementById('login-email');
@@ -25,4 +26,17 @@ function creatRateOptions() {
     avaliacao.appendChild(label);
   }
 }
+
+check.addEventListener('click', (event) => {
+  const button = document.getElementById('submit-btn'); 
+  const element = event.target;
+
+  if (element.checked) {
+    console.log('entrou')
+    button.disabled = false;
+  } else {
+    button.disabled = true;
+  }
+})
+
 creatRateOptions();
