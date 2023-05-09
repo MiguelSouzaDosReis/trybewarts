@@ -5,51 +5,242 @@
 
 .header {
   display: flex;
-  background-color: rgb(50, 167, 145);
   justify-content: space-between;
   align-items: center;
+  background-color: #70c1b3;
+  color: #fff;
 }
+
+.trybewarts-header-logo {
+  width: 80px;
+  height: 80px;
+}
+
+#trybewarts-header-title {
+  font-size: 36px;
+  position: relative;
+  right: -200px;
+}
+
 
 .trybewarts-login {
   display: flex;
 }
 
-.trybewarts-header-logo {
-  width: 60px;
-  margin-left: 15px;
+.trybewarts-login input {
+  padding: 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  border: none;
 }
 
-#login-email , #login-button , #login-password {
-  margin: 0 5px;
-  border-radius: 5px;
+.Enter {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #70c1b3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-#main , #evaluation-form {
+.Enter:hover {
+  background-color: #2a9d8f;
+}
+
+
+.rating {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
 }
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked + label {
+  color: orange;
+}
+
+
 
 #evaluation-form {
-  width: 675px;
-  flex-direction: column;
-}
-
-#main {
-  justify-content: space-between;
-}
-
-#trybewarts-forms-logo {
-  height: 500px;
-}
-
-.line {
-  display: flex;
-}
-
-.column {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 100%;
+  position: relative;
+  left: -20px;
+}
+
+#house option:first-child {
+  color: gray;
+  font-style: italic;
+  pointer-events: none;
+}
+
+
+#house {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 200px;
+  position: relative;
+  top: 20px;
+}
+
+#gitnoria-house {
+  color: #8b0000;
+}
+
+#reactpuff-house {
+  color: #ecb939;
+}
+
+#corvinode-house {
+  color: #46B1C9;
+}
+
+#pytherina-house {
+  color: #1a472a;
+}
+
+h2{
+  text-align: center;
+}
+
+.line{
+  text-align: center;
+  padding: 10px;
+}
+
+.radio-family {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.subject {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
 }
 
 #rate {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
+
+.textarea {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  resize: vertical;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 400px;
+}
+
+#counter {
+  text-align: right;
+}
+
+/* Estilos para o campo de concordância */
+#label-infos {
+  margin-top: 20px;
+}
+
+#agreement {
+  margin-left: 10px;
+}
+
+/* Estilos para o botão de envio */
+#submit-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4A4A4A;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: #292929;
+}
+
+/* Estilos para a seção após o formulário */
+#pos-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#trybewarts-forms-logo {
+  max-width: 200px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Estilos para telas com largura máxima de 768 pixels */
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .trybewarts-login {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #trybewarts-header-title {
+    right: auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  input[type="text"], #house {
+    width: 100%;
+    left: 0;
+  }
+  .trybewarts-login input[type="email"] {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
